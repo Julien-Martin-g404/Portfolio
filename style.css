@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Styles communs */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Partie gauche */
+
+.sidebar {
+    position: fixed;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar img {
+
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 26px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+nav a:hover {
+
+    color: red;
+}
+
+nav a.active,
+nav a:active {
+    color: red;
+
+}
+
+/* Sections */
+
+.content {
+    margin-left: 15%;
+    /* On prend en compte la largeur de la colonne de gauche */
+
+}
+
+section {
+    /* height: 500px; */
+    border-bottom: 2px solid #ccc;
+    padding: 20px;
+    background-image: url('/images/fond.png');
+}
+
+section#accueil {}
+
+
+section#competences {}
+
+section#projets {}
+
+section#contact {}
+
+/* Liens actifs */
+
+
+ul {
+
+    list-style: none;
+
+}
+
+nav ul li {
+
+    margin-bottom: 27px;
+
+}
+
+.imgid {
+
+    width: 290px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 3px rgb(61, 61, 61);
+    justify-content: center;
+    margin-top: -30px;
+
+}
+
+.main-container {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image-container {
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    /* border: rgb(0, 76, 255) solid 3px; */
+
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: rgb(79, 78, 78) solid 3px;
+}
+
+.text-container {
+    height: 30%;
+    width: 90%;
+    text-align: center;
+    border: rgb(79, 78, 76) solid 3px;
+    border-radius: 10px;
+    background-color: #b2cacc;
+    padding: 20px;
+
+}
+
+.form {
+
+    border: 2 px solid rgb(0, 0, 0);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    width: 450px;
+    height: 600px;
+    float: right;
+    background-color: #6f6f71;
+
+
+
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #bc0332;
+}
+
+.contact {
+
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+
+
+
+
+#SkillBox {
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+    width: 70%;
+    height: auto;
+    margin: 40px auto;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    padding: 10px;
+    border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+
+
+.SkillBar {
+    border-radius: 20px;
+    width: 80%;
+    height: 50px;
+    position: relative;
+    background: rgba(17, 17, 17, .3);
+    margin: 20px auto;
+}
+
+#Skill-HTML {
+    border-radius: 20px;
+    width: 80%;
+    animation: Animate-HTML 4s;
+    -webkit-animation: Animate-HTML 4s;
+    -moz-animation: Animate-HTML 4s;
+    -o-animation: Animate-HTML 4s;
+    height: 50px;
+    position: absolute;
+    background-color: #ea8564;
+}
+
+@keyframes Animate-HTML {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+@-webkit-keyframes Animate-HTML {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+@-moz-keyframes Animate-HTML {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+@-o-keyframes Animate-HTML {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+
+#Skill-CSS {
+    border-radius: 20px;
+    animation: Animate-CSS 5s;
+    -webkit-animation: Animate-CSS 5s;
+    -moz-animation: Animate-CSS 5s;
+    -o-animation: Animate-CSS 5s;
+    width: 75%;
+    height: 50px;
+    position: absolute;
+    background-color: #55a69f;
+}
+
+@keyframes Animate-CSS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 75%
+    }
+}
+
+@-webkit-keyframes Animate-CSS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 75%
+    }
+}
+
+@-moz-keyframes Animate-CSS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 75%
+    }
+}
+
+@-o-keyframes Animate-CSS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 75%
+    }
+}
+
+#Skill-BOOTSTRAP {
+    border-radius: 20px;
+    width: 70%;
+    animation: Animate-BOOTSTRAP 4s;
+    -webkit-animation: Animate-BOOTSTRAP 4s;
+    -moz-animation: Animate-BOOTSTRAP 4s;
+    -o-animation: Animate-BOOTSTRAP 4s;
+    height: 50px;
+    position: absolute;
+    background-color: #eea632;
+}
+
+@keyframes Animate-BOOTSTRAP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 70%
+    }
+}
+
+@-webkit-keyframes Animate-BOOTSTRAP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 70%
+    }
+}
+
+@-moz-keyframes Animate-BOOTSTRAP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 70%
+    }
+}
+
+@-o-keyframes Animate-BOOTSTRAP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 70%
+    }
+}
+
+
+
+#Skill-JS {
+    border-radius: 20px;
+    animation: Animate-JS 4s;
+    -webkit-animation: Animate-JS 4s;
+    -moz-animation: Animate-JS 4s;
+    -o-animation: Animate-JS 4s;
+    width: 50%;
+    height: 50px;
+    position: absolute;
+    background-color: #c44e45;
+}
+
+@keyframes Animate-JS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+@-webkit-keyframes Animate-JS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+@-moz-keyframes Animate-JS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+@-o-keyframes Animate-JS {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+
+#Skill-PHP {
+    border-radius: 20px;
+    animation: Animate-PHP 4s;
+    -webkit-animation: Animate-PHP 4s;
+    -moz-animation: Animate-PHP 4s;
+    -o-animation: Animate-PHP 4s;
+    width: 65%;
+    height: 50px;
+    position: absolute;
+    background-color: #5A69A6;
+}
+
+@keyframes Animate-PHP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 65%
+    }
+}
+
+@-webkit-keyframes Animate-PHP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 65%
+    }
+}
+
+@-moz-keyframes Animate-PHP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 65%
+    }
+}
+
+@-o-keyframes Animate-PHP {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 65%
+    }
+}
+
+#Skill-SQL {
+    border-radius: 20px;
+    animation: Animate-SQL 4s;
+    -webkit-animation: Animate-SQL 4s;
+    -moz-animation: Animate-SQL 4s;
+    -o-animation: Animate-SQL 4s;
+    width: 80%;
+    height: 50px;
+    position: absolute;
+    background-color: #23b1db;
+}
+
+@keyframes Animate-SQL {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+@-webkit-keyframes Animate-SQL {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+@-moz-keyframes Animate-SQL {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+@-o-keyframes Animate-SQL {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+
+.Skill-Area {
+    z-index: 1;
+    float: left;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-shadow: none;
+    color: #fff;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 18px;
+}
+
+.PercentText {
+    z-index: 3;
+    position: relative;
+    padding-right: 15px;
+    margin-top: 15px;
+    float: right;
+    text-shadow: none;
+    color: #fff;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 18px;
+}
+
+pter
