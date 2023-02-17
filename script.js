@@ -1,5 +1,11 @@
 const navLinks = document.querySelectorAll('nav a');
 
+window.addEventListener('scroll', () => {
+  const {scrollTop, clientHeight} = document.documentElement;
+
+  console.log(scrollTop, clientHeight);
+});
+
 navLinks.forEach(link => {
     link.addEventListener('click', function (event) {
         event.preventDefault(); // Empêcher le comportement par défaut du lien
@@ -16,5 +22,6 @@ navLinks.forEach(link => {
         targetElement.scrollIntoView({ behavior: "smooth" });
     });
 });
+
 
 

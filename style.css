@@ -210,6 +210,7 @@ input[type="submit"]:hover {
     -webkit-border-radius: 20px;
     -ms-border-radius: 20px;
     -moz-border-radius: 20px;
+
 }
 
 
@@ -563,5 +564,3 @@ input[type="submit"]:hover {
     font-family: Lato-Regular, sans-serif;
     font-size: 18px;
 }
-
-pter
