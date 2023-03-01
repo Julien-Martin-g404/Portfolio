@@ -5,55 +5,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link href="style.css" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 
 <body>
     <!-- Colonne de gauche fixe -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <!-- Image de logo -->
-        <img src="/images/logo.png" alt="Votre logo" />
+
+        <div class="logo" style="display: flex; justify-content: center;">
+            <img src="images/logo.png" width="100%">
+        </div>
+        <div class="btn_two">
+            <label for="check">
+
+            </label>
+        </div>
+
         <!-- Menu -->
         <nav>
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#competences" id="competence">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <i class="fas fa-home"></i>
+                    <a href="#accueil">Accueil</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-list"></i>
+                    <a href="#competences" id="competence">Compétences</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-folder-open"></i>
+                    <a href="#projets">Projets</a>
+                </li>
+
             </ul>
+
+            <footer>
+                <div class="social-icons">
+                    <a target="_blank" href="https://github.com/Julien-Martin-g404?tab=repositories/">
+                        <i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/julien-martin-36b280267"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+                <button class="contact"><a target="_blank" href="mailto:julienmartin2802@gmail.com">Me
+                        Contacter</a></button>
+            </footer>
         </nav>
     </div>
 
     <!-- Partie droite scrollable -->
     <div class="content">
+
         <!-- Section Accueil -->
         <section id="accueil">
 
-            <p style="display:flex; justify-content: center; font-size: 35px; margin-bottom: 70px;">Bienvenue sur mon
-                portfolio !
+            <div class="burger">
+
+                <img src="images/burger.png" id="burger-menu">
+
+            </div>
+
+
+
+            <p class="titre">
+                Bienvenue sur mon portfolio !
             </p>
 
 
             <div class="main-container">
                 <div class="image-container">
                     <img src="images/photoid.jpg" class="imgid" alt="photo identité">
-                    <h2
-                        style="font-family: Clicker Script; font-size: 42px; margin-top: 10px; margin-bottom: 10px; color: #9dd7dd;">
+                    <h2 class="nom">
                         Martin Julien
                         <br style="margin-bottom: 25px;">
                         Développeur Web / Web mobile
                     </h2>
+
+                    <p class="texte">Développeur web junior enthousiaste, prêt à apporter sa contribution
+                        à<br>
+                        des projets passionnants et à apprendre auprès d'une équipe expérimentée.<br><br>
+                        Je suis à la recherche d'un stage du 9 mai au 27 juillet 2023.
+                    </p>
                 </div>
 
-                <p style="font-size: 24px;">En formation chez Garage 404 à Saint-Etienne, je suis à
-                    la recherche d'un
-                    stage du 9 mai au 27 juillet 2023.
-                </p>
 
-                <button value="Voir mon CV"
-                    style="background-color: #9dd7dd; border-radius: 5px; height: 50px;width: 120px; font-size: 18px;margin-top: 22px; margin-bottom: 22px;">Voir
-                    mon CV</button>
+                <a href="images/MARTIN Julien.pdf" target="_blank"><button class="but" value="Voir mon CV">Voir
+                        mon CV</button>
+                </a>
             </div>
 
 
@@ -66,7 +109,7 @@
 
 
 
-            <p style="font-size: 40px; display: flex; justify-content: center;">Mes Compétences</p>
+            <p style="display:flex; justify-content: center; font-size: 35px;">Mes Compétences</p>
 
 
             <div id="SkillBox">
@@ -77,7 +120,7 @@
                 <div class="SkillBar">
                     <div id="Skill-HTML">
                         <span class="Skill-Area ">HTML</span>
-                        <span class="PercentText ">80%</span>
+                        <span class="PercentText ">70%</span>
                     </div>
                 </div>
 
@@ -85,7 +128,7 @@
                 <div class="SkillBar">
                     <div id="Skill-CSS">
                         <span class="Skill-Area ">CSS</span>
-                        <span class="PercentText ">75%</span>
+                        <span class="PercentText ">65%</span>
                     </div>
                 </div>
 
@@ -94,7 +137,7 @@
                 <div class="SkillBar">
                     <div id="Skill-BOOTSTRAP">
                         <span class="Skill-Area ">BOOTSTRAP </span>
-                        <span class="PercentText ">70%</span>
+                        <span class="PercentText ">60%</span>
                     </div>
                 </div>
 
@@ -109,7 +152,7 @@
                 <div class="SkillBar">
                     <div id="Skill-SQL">
                         <span class="Skill-Area ">MYSQL </span>
-                        <span class="PercentText ">80%</span>
+                        <span class="PercentText ">65%</span>
                     </div>
                 </div>
 
@@ -128,40 +171,38 @@
 
         <!-- Section Projets -->
         <section id="projets">
-            <h1>Projets</h1>
-            <p>Voici mes projets :</p>
-            <ul>
-                <li>Projet 1</li>
-                <li>Projet 2</li>
-                <li>Projet 3</li>
-            </ul>
-        </section>
+            <p style="display:flex; justify-content: center; font-size: 35px;"> Mes Projets</p>
+            <div class="project-section">
+                <div class="project-card">
+                    <img src="/images/Instagram.png" alt="Project 1">
+                    <p style="font-size: 20px;">Copie d'Instagram</p>
+                    <button><a target="_blank"
+                            href="https://julien-ahmed-instagram.projets.garage404.com/">Voir</a></button>
+                </div>
 
-        <!-- Section Contact -->
-        <section id="contact">
+                <div class="project-card">
+                    <img src="images/Onemillionlines.png" alt="Project 3">
+                    <p style="font-size: 20px;">Onemillionlines</p>
+                    <button><a target="_blank"
+                            href="https://julien-onemillionlines.projets.garage404.com">Voir</a></button>
+                </div><br>
+                <div class="project-card">
+                    <img src="images/Morpion.png" alt="Project 4">
+                    <p style="font-size: 20px;">Jeu du Morpion</p>
+                    <button><a target="_blank" href="https://julien-morpion.projets.garage404.com/">Voir</a></button>
+                </div>
+                <div class="project-card">
+                    <img src="images/Mountain.png" alt="Project 2">
+                    <p style="font-size: 20px;">The Mountain</p>
+                    <button><a target="_blank" href="https://julien-mountain.projets.garage404.com/">Voir</a></button>
 
-            <div class="main-container">
-                <div
-                    style="border: solid 2px black; width: 900px; border-radius:10px; background-image: url('images/contact.jpg'); background-size: 118%;  background-repeat: no-repeat;">
-                    <div class=" form">
-                        <h2 class="contact">Contactez-moi</h2>
-                        <form>
-                            <label>Nom:</label>
-                            <input type="text" name="nom" required><br><br>
-                            <label>Prénom:</label>
-                            <input type="text" name="prenom" required><br><br>
-                            <label>Email:</label>
-                            <input type="email" name="email" required><br><br>
-                            <label>Message:</label>
-                            <textarea type="textarea" rows="5" name="message" required></textarea><br><br>
-                            <input type="submit" value="Envoyer">
-                        </form>
-                    </div>
                 </div>
 
             </div>
 
         </section>
+
+
     </div>
 
     <script src="script.js"></script>

@@ -4,6 +4,7 @@
 
 * {
     box-sizing: border-box;
+
 }
 
 body {
@@ -17,19 +18,21 @@ body {
 .sidebar {
     position: fixed;
     align-items: center;
-    width: 15%;
+    width: 250px;
     height: 100%;
     background-color: #333;
     color: #fff;
+    border-right: 1px solid #FFF;
 }
 
 .sidebar img {
 
     display: block;
     margin: 0 auto;
-    max-width: 50%;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-bottom: brown solid 2px;
+
 }
 
 
@@ -37,51 +40,47 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 200px;
-    font-size: 26px;
+    font-size: 18px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
 
 }
 
-nav a:hover {
+
+nav li a:hover {
 
     color: red;
 }
 
-nav a.active,
-nav a:active {
+nav a.active {
     color: red;
+}
+
+nav li i {
+
+    padding: 5px;
+    margin-left: -15px;
 
 }
 
 /* Sections */
 
 .content {
-    margin-left: 15%;
+    margin-left: 250px;
     /* On prend en compte la largeur de la colonne de gauche */
 
 }
 
 section {
-    /* height: 500px; */
+
     border-bottom: 2px solid #ccc;
     padding: 20px;
     background-image: url('/images/fond.png');
+
 }
-
-section#accueil {}
-
-
-section#competences {}
-
-section#projets {}
-
-section#contact {}
 
 /* Liens actifs */
 
@@ -97,6 +96,7 @@ nav ul li {
     margin-bottom: 27px;
 
 }
+
 
 .imgid {
 
@@ -145,54 +145,56 @@ nav ul li {
 
 }
 
-.form {
 
-    border: 2 px solid rgb(0, 0, 0);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+.project-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+
+}
+
+#projets img {
+
+    height: 200px;
+
+}
+
+#projets button a {
+
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+
+}
+
+
+#projets button {
+
+    height: 40px;
+    width: 80px;
+    border-radius: 8px;
+    background-color: #b2cacc;
+    border: 2px solid brown;
+
+}
+
+.project-card {
+    border: 2px solid brown;
     padding: 20px;
-    width: 450px;
-    height: 600px;
-    float: right;
-    background-color: #6f6f71;
-
-
-
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #bc0332;
-}
-
-.contact {
-
     text-align: center;
-    font-size: 30px;
-
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: white;
 }
 
+.project-card img {
 
+    border-radius: 6px;
 
+}
 
 
 
@@ -218,20 +220,20 @@ input[type="submit"]:hover {
 .SkillBar {
     border-radius: 20px;
     width: 80%;
-    height: 50px;
+    height: 40px;
     position: relative;
     background: rgba(17, 17, 17, .3);
     margin: 20px auto;
 }
 
-#Skill-HTML {
+.Skill-HTML {
     border-radius: 20px;
-    width: 80%;
+    width: 70%;
     animation: Animate-HTML 4s;
     -webkit-animation: Animate-HTML 4s;
     -moz-animation: Animate-HTML 4s;
     -o-animation: Animate-HTML 4s;
-    height: 50px;
+    height: 40px;
     position: absolute;
     background-color: #ea8564;
 }
@@ -242,7 +244,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 70%
     }
 }
 
@@ -252,7 +254,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 70%
     }
 }
 
@@ -262,7 +264,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 70%
     }
 }
 
@@ -272,19 +274,19 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 70%
     }
 }
 
 
-#Skill-CSS {
+.Skill-CSS {
     border-radius: 20px;
-    animation: Animate-CSS 5s;
-    -webkit-animation: Animate-CSS 5s;
-    -moz-animation: Animate-CSS 5s;
-    -o-animation: Animate-CSS 5s;
-    width: 75%;
-    height: 50px;
+    animation: Animate-CSS 4s;
+    -webkit-animation: Animate-CSS 4s;
+    -moz-animation: Animate-CSS 4s;
+    -o-animation: Animate-CSS 4s;
+    width: 65%;
+    height: 40px;
     position: absolute;
     background-color: #55a69f;
 }
@@ -295,7 +297,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 75%
+        width: 65%;
     }
 }
 
@@ -305,7 +307,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 75%
+        width: 65%;
     }
 }
 
@@ -315,7 +317,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 75%
+        width: 65%;
     }
 }
 
@@ -325,18 +327,18 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 75%
+        width: 65%;
     }
 }
 
-#Skill-BOOTSTRAP {
+.Skill-BOOTSTRAP {
     border-radius: 20px;
-    width: 70%;
     animation: Animate-BOOTSTRAP 4s;
     -webkit-animation: Animate-BOOTSTRAP 4s;
     -moz-animation: Animate-BOOTSTRAP 4s;
     -o-animation: Animate-BOOTSTRAP 4s;
-    height: 50px;
+    width: 60%;
+    height: 40px;
     position: absolute;
     background-color: #eea632;
 }
@@ -347,7 +349,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 70%
+        width: 60%;
     }
 }
 
@@ -357,7 +359,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 70%
+        width: 60%;
     }
 }
 
@@ -367,7 +369,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 70%
+        width: 60%;
     }
 }
 
@@ -377,20 +379,20 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 70%
+        width: 60%;
     }
 }
 
 
 
-#Skill-JS {
+.Skill-JS {
     border-radius: 20px;
     animation: Animate-JS 4s;
     -webkit-animation: Animate-JS 4s;
     -moz-animation: Animate-JS 4s;
     -o-animation: Animate-JS 4s;
     width: 50%;
-    height: 50px;
+    height: 40px;
     position: absolute;
     background-color: #c44e45;
 }
@@ -401,7 +403,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 50%
+        width: 50%;
     }
 }
 
@@ -411,9 +413,10 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 50%
+        width: 50%;
     }
 }
+
 
 @-moz-keyframes Animate-JS {
     from {
@@ -421,7 +424,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 50%
+        width: 50%;
     }
 }
 
@@ -431,19 +434,19 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 50%
+        width: 50%;
     }
 }
 
 
-#Skill-PHP {
+.Skill-PHP {
     border-radius: 20px;
     animation: Animate-PHP 4s;
     -webkit-animation: Animate-PHP 4s;
     -moz-animation: Animate-PHP 4s;
     -o-animation: Animate-PHP 4s;
     width: 65%;
-    height: 50px;
+    height: 40px;
     position: absolute;
     background-color: #5A69A6;
 }
@@ -454,7 +457,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 65%
+        width: 65%;
     }
 }
 
@@ -464,7 +467,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 65%
+        width: 65%;
     }
 }
 
@@ -474,7 +477,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 65%
+        width: 65%;
     }
 }
 
@@ -484,18 +487,18 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 65%
+        width: 65%;
     }
 }
 
-#Skill-SQL {
+.Skill-SQL {
     border-radius: 20px;
     animation: Animate-SQL 4s;
     -webkit-animation: Animate-SQL 4s;
     -moz-animation: Animate-SQL 4s;
     -o-animation: Animate-SQL 4s;
-    width: 80%;
-    height: 50px;
+    width: 65%;
+    height: 40px;
     position: absolute;
     background-color: #23b1db;
 }
@@ -506,7 +509,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 65%;
     }
 }
 
@@ -516,7 +519,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 80%;
     }
 }
 
@@ -526,7 +529,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 65%;
     }
 }
 
@@ -536,7 +539,7 @@ input[type="submit"]:hover {
     }
 
     to {
-        width: 80%
+        width: 65%;
     }
 }
 
@@ -545,7 +548,7 @@ input[type="submit"]:hover {
     z-index: 1;
     float: left;
     position: absolute;
-    margin-top: 15px;
+    margin-top: 12px;
     margin-left: 15px;
     text-shadow: none;
     color: #fff;
@@ -557,10 +560,286 @@ input[type="submit"]:hover {
     z-index: 3;
     position: relative;
     padding-right: 15px;
-    margin-top: 15px;
+    margin-top: 12px;
     float: right;
     text-shadow: none;
     color: #fff;
     font-family: Lato-Regular, sans-serif;
     font-size: 18px;
+}
+
+
+footer {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: brown 2px solid;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+}
+
+.social-icons a:hover {
+    font-size: 50px;
+}
+
+.contact {
+
+    border-radius: 8px;
+    background-color: #23b1db;
+    height: 30px;
+    width: 130px;
+    font-size: 18px;
+}
+
+.contact:hover {
+
+    border-radius: 8px;
+    background-color: brown;
+    height: 30px;
+    width: 130px;
+    font-size: 18px;
+    color: white;
+}
+
+.titre {
+    animation-duration: 3s;
+    animation-name: slidein;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 70px;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.but {
+    background-color: #9dd7dd;
+    border: solid 2px brown;
+    border-radius: 5px;
+    height: 50px;
+    width: 120px;
+    font-size: 18px;
+    margin-top: 150px;
+    margin-bottom: 22px;
+}
+
+.but:hover {
+    border: 2px solid #9dd7dd;
+    background-color: brown;
+
+}
+
+.nom {
+
+    font-family: Clicker Script;
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #9dd7dd;
+
+}
+
+.texte {
+
+    font-size: 24px;
+
+}
+
+.burger {
+
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+
+    .content {
+
+        margin-left: 0px;
+    }
+
+    .sidebar {
+
+        display: none;
+        z-index: 10;
+    }
+
+    .PercentText {
+
+        font-size: 12px;
+    }
+
+    .Skill-Area {
+
+        font-size: 12px;
+
+
+    }
+
+    #SkillBox {
+
+        width: 100%;
+
+    }
+
+    .but {
+
+        margin-top: 190px;
+    }
+
+    .project-section {
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .titre {
+
+        font-size: 25px;
+    }
+
+    .imgid {
+
+        width: 70%;
+
+    }
+
+    .nom {
+
+        font-size: 30px;
+
+    }
+
+    .texte {
+
+        font-size: 22px;
+    }
+
+    .project-card {
+
+        width: 100%;
+
+    }
+
+    .project-card img {
+
+        width: 100%;
+
+    }
+
+    .burger {
+
+        display: block;
+        position: fixed;
+
+    }
+
+    .burger img {
+
+        width: 8%;
+        margin-top: -10px;
+
+
+    }
+
+    .contact {
+
+        height: 40px;
+        width: 100px;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+
+    .but {
+
+        margin-top: 200px;
+
+    }
+
+    .PercentText {
+
+        font-size: 16px;
+    }
+
+    .Skill-Area {
+
+        font-size: 16px;
+
+
+    }
+
+    #SkillBox {
+
+        width: 100%;
+
+    }
+
+    .project-section {
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+
+    .but {
+
+        margin-top: 200px;
+
+    }
+
+    .PercentText {
+
+        font-size: 16px;
+    }
+
+    .Skill-Area {
+
+        font-size: 16px;
+
+
+    }
+
+    #SkillBox {
+
+        width: 100%;
+
+    }
+
+    .project-section {
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
 }
