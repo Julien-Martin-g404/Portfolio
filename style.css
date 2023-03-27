@@ -550,7 +550,7 @@ nav ul li {
     position: absolute;
     margin-top: 12px;
     margin-left: 15px;
-    text-shadow: none;
+    margin-bottom: 10px;
     color: #fff;
     font-family: Lato-Regular, sans-serif;
     font-size: 18px;
@@ -599,8 +599,8 @@ footer {
 
     border-radius: 8px;
     background-color: #23b1db;
-    height: 30px;
-    width: 130px;
+    height: 50px;
+    width: 100px;
     font-size: 18px;
 }
 
@@ -608,8 +608,8 @@ footer {
 
     border-radius: 8px;
     background-color: brown;
-    height: 30px;
-    width: 130px;
+    height: 50px;
+    width: 100px;
     font-size: 18px;
     color: white;
 }
@@ -672,6 +672,7 @@ footer {
 
     display: none;
 }
+
 
 @media screen and (max-width:600px) {
 
@@ -819,12 +820,12 @@ footer {
 
     .PercentText {
 
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .Skill-Area {
 
-        font-size: 16px;
+        font-size: 18px;
 
 
     }
